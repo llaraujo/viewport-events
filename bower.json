@@ -1,0 +1,10 @@
+{
+  "name": "viewport-events",
+  "version": "0.0.1",
+  "dependencies": {
+    "backbone": "*",
+    "eventEmitter": "*",
+    "jquery": "*",
+    "underscore": "*"
+  }
+}

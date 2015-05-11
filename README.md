@@ -14,16 +14,16 @@
 ###To initialize, pass your lib Events in constructor:
 
 * EventEmitter:
-	
+
 	```
 	var Events = new EventEmitter();
 	var VPEvents = new ViewportEvents(new EventEmitter());
 	```
-	
+
 * jQuery Events:
 
 	```
-	var Events = jQuery;
+	var Events = jQuery(window);
 	var VPEvents = new ViewportEvents(Events);
 	```
 
@@ -76,7 +76,7 @@ Events.on('site-lg', function(){
 
 Lib automatically creates the 'outside' event to face the media querie created, informing when the viewport is leaving the rule set for you! Example:
 
-You created: 
+You created:
 
 ```
 VPEvents.add({
@@ -101,10 +101,15 @@ Events.on('site-lg-outside', function(){
 });
 ```
 
-
 ## Support?
+
 * Check API matchMedia support in [caniuse.com](http://caniuse.com/#search=matchMedia)
 * Use polyfill [matchMedia](https://github.com/paulirish/matchMedia.js) by [Paul Irish](https://github.com/paulirish)
+
+
+## Contributing
+
+Let's rock!
 
 ## License
 

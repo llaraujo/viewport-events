@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Viewport Events: With EventEmitter</title>
+    <script src="../vendor/underscore/underscore-min.js"></script>
+    <script src="../vendor/backbone/backbone.js"></script>
+    <script src="../src/viewport-events.js"></script>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+
+      var Events = Backbone.Events;
+      var VPEvents = new ViewportEvents(Events);
+
+      Events.on('site-md-outside', function(){
+        console.log('site-md-outside: entrou!');
+      });
+
+      Events.on('site-md', function(){
+        console.log('site-md: entrou!');
+      });
+
+      Events.on('site-lg-outside', function(){
+        console.log('site-lg-outside: entrou!');
+      });
+
+      Events.on('site-lg', function(){
+        console.log('site-lg: entrou!');
+      });
+
+      Events.on('site-lg-orientation-outside', function(){
+        console.log('site-lg-orientation-outside: entrou!');
+      });
+
+      Events.on('site-lg-orientation', function(){
+        console.log('site-lg-orientation: entrou!');
+      });
+
+      VPEvents.add({
+        'site-lg': "(min-width: 600px)",
+        'site-lg-orientation': "(min-width: 600px) and (orientation: portrait)"
+      });
+
+      VPEvents.add({
+        'site-md': "(max-width: 599px)",
+        'site-lg': "(max-width: 599px)"
+      });
+      }, false);
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "evil":       false,
+  "forin":      true,
+  "funcscope":  true,
+  "unused":     true
+}

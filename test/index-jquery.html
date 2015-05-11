@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Viewport Events: With jQuery</title>
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../src/viewport-events.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <script>
+      var Events = jQuery(window);
+      var VPEvents = new ViewportEvents(Events);
+
+      Events.on('site-md-outside', function(){
+        console.log('site-md-outside: entrou!');
+      });
+
+      Events.on('site-md', function(){
+        console.log('site-md: entrou!');
+      });
+
+      Events.on('site-lg-outside', function(){
+        console.log('site-lg-outside: entrou!');
+      });
+
+      Events.on('site-lg', function(){
+        console.log('site-lg: entrou!');
+      });
+
+      Events.on('site-lg-orientation-outside', function(){
+        console.log('site-lg-orientation-outside: entrou!');
+      });
+
+      Events.on('site-lg-orientation', function(){
+        console.log('site-lg-orientation: entrou!');
+      });
+
+      VPEvents.add({
+        'site-lg': "(min-width: 600px)",
+        'site-lg-orientation': "(min-width: 600px) and (orientation: portrait)"
+      });
+
+      VPEvents.add({
+        'site-md': "(max-width: 599px)",
+        'site-lg': "(max-width: 599px)"
+      });
+    </script>
+
+  </body>
+</html>
