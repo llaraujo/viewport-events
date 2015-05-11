@@ -1,6 +1,23 @@
 {
-  "name": "viewport-events",
+  "name": "Viewport Events",
   "version": "0.0.1",
+  "homepage": "https://github.com/llaraujo/viewport-events",
+  "authors": [
+    "Leonardo Lima <leonardo@llaraujo.com>"
+  ],
+  "description": "Receive notifications when events happen viewport changes",
+  "main": "viewport-events.min.js",
+  "keywords": [
+    "javascript",
+    "viewport",
+    "events",
+    "events",
+    "resize",
+    "listener",
+    "media",
+    "matchMedia",
+    "media queries"
+  ],
   "dependencies": {
     "backbone": "*",
     "eventEmitter": "*",
