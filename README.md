@@ -17,7 +17,7 @@
 
 	```
 	var Events = new EventEmitter();
-	var VPEvents = new ViewportEvents(new EventEmitter());
+	var VPEvents = new ViewportEvents(Events);
 	```
 
 * jQuery Events:
