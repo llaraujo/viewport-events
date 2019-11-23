@@ -1,6 +1,6 @@
-#Viewport Events
+# Viewport Events
 
-##Receive notifications when events happen viewport changes
+## Receive notifications when events happen viewport changes
 
 
 ## Dependencies
@@ -11,7 +11,7 @@
 ## Usage
 
 
-###To initialize, pass your lib Events in constructor:
+### To initialize, pass your lib Events in constructor:
 
 * EventEmitter:
 
@@ -69,7 +69,7 @@ VPEvents.rm('site-lg');
 Try! :)
 
 ```
-Events.on('site-lg', function(){
+Events.on('site-lg', () => {
 	console.log('Inside in my media queries defined! site-lg!');
 });
 ```
@@ -88,7 +88,7 @@ And you receive 2 events:
 Match your rule:
 
 ```
-Events.on('site-lg', function(){
+Events.on('site-lg', () => {
 	console.log('Inside in my media queries defined! site-lg!');
 });
 ```
@@ -96,7 +96,7 @@ Events.on('site-lg', function(){
 Out of your rule:
 
 ```
-Events.on('site-lg-outside', function(){
+Events.on('site-lg-outside', () => {
 	console.log('Out of my media queries defined! site-lg!');
 });
 ```
